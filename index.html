@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spandan Sen Choudhury - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Very dark gray, almost black */
+            color: #e5e5e5; /* Light gray for text */
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        .techno-text {
+            color: #00e5ff; /* Bright cyan for accents */
+        }
+        .techno-button {
+            background-color: #00e5ff;
+            color: #0a0a0a;
+            transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+        }
+        .techno-button:hover {
+            background-color: #00c4dd;
+            transform: scale(1.05);
+        }
+        .progress-bar-container {
+            background-color: #262626; /* Darker gray for progress bar background */
+        }
+        .progress-bar-fill {
+            background-color: #00e5ff; /* Cyan for progress fill */
+            transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth animation for progress bar */
+        }
+        .section-title {
+            border-bottom: 2px solid #00e5ff;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .card {
+            background-color: #171717; /* Slightly lighter dark for cards */
+            border: 1px solid #262626; /* Subtle border */
+        }
+        .form-input, .form-textarea {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: #e5e5e5;
+        }
+        .form-input::placeholder, .form-textarea::placeholder {
+            color: #777;
+        }
+        .social-link:hover {
+            color: #00e5ff;
+            transform: scale(1.1);
+        }
+        .blog-post-item:hover .blog-post-title {
+            color: #00e5ff;
+        }
+        .blog-post-item:hover .blog-post-arrow {
+            transform: translateX(5px);
+            color: #00e5ff;
+        }
+        /* Custom focus states for better visibility */
+        *:focus-visible {
+            outline: 2px solid #00e5ff !important; /* Bright cyan outline */
+            outline-offset: 2px !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="hero" class="min-h-[60vh] md:min-h-[50vh] flex flex-col items-center justify-center text-center p-8 selection:bg-sky-500 selection:text-black">
+        <div data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-4">
+                Spandan SC
+            </h1>
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-400 mb-8">
+                Software Development Engineer
+            </p>
+            <a href="#projects"
+               class="techno-button font-semibold py-3 px-8 rounded-lg text-lg inline-block shadow-lg hover:shadow-cyan-500/50">
+                View My Work
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-10">
+
+        <section id="about" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title" data-aos="fade-up">
+                About Me
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        Hello! I'm a passionate Full-Stack Developer with a knack for creating seamless and engaging digital experiences. I thrive on solving complex problems and continuously learning new technologies. My journey in tech is driven by a desire to build things that are not only functional but also intuitive and aesthetically pleasing.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or enjoying a good cup of coffee.
+                    </p>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-100">My Skills</h3>
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-sky-300">JavaScript (React, Node.js)</span>
+                                <span class="text-sm font-medium text-sky-300 skill-percentage" data-level="90">90%</span>
+                            </div>
+                            <div class="w-full progress-bar-container rounded-full h-3">
+                                <div class="progress-bar-fill h-3 rounded-full" style="width: 0%" data-skill-level="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-sky-300">Python (Django, Flask)</span>
+                                <span class="text-sm font-medium text-sky-300 skill-percentage" data-level="85">85%</span>
+                            </div>
+                            <div class="w-full progress-bar-container rounded-full h-3">
+                                <div class="progress-bar-fill h-3 rounded-full" style="width: 0%" data-skill-level="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-sky-300">UI/UX Design (Figma)</span>
+                                <span class="text-sm font-medium text-sky-300 skill-percentage" data-level="75">75%</span>
+                            </div>
+                            <div class="w-full progress-bar-container rounded-full h-3">
+                                <div class="progress-bar-fill h-3 rounded-full" style="width: 0%" data-skill-level="75"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-sky-300">Databases (SQL, NoSQL)</span>
+                                <span class="text-sm font-medium text-sky-300 skill-percentage" data-level="80">80%</span>
+                            </div>
+                            <div class="w-full progress-bar-container rounded-full h-3">
+                                <div class="progress-bar-fill h-3 rounded-full" style="width: 0%" data-skill-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title" data-aos="fade-up">
+                My Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card rounded-xl p-6 shadow-lg hover:shadow-cyan-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-duration="500">
+                    <h3 class="text-2xl font-semibold mb-3 text-sky-300">Project Alpha</h3>
+                    <div class="mb-3">
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Node.js</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        A full-featured e-commerce platform with advanced filtering and a custom admin dashboard. Built for scalability and performance.
+                    </p>
+                    <a href="#" class="font-medium text-sky-400 hover:text-sky-300 hover:underline underline-offset-4 transition-colors">
+                        View Details &rarr;
+                    </a>
+                </div>
+                <div class="card rounded-xl p-6 shadow-lg hover:shadow-cyan-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-3 text-sky-300">Project Beta</h3>
+                     <div class="mb-3">
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Django</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        A real-time data visualization tool for financial markets, offering interactive charts and predictive analytics.
+                    </p>
+                    <a href="#" class="font-medium text-sky-400 hover:text-sky-300 hover:underline underline-offset-4 transition-colors">
+                        View Details &rarr;
+                    </a>
+                </div>
+                <div class="card rounded-xl p-6 shadow-lg hover:shadow-cyan-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-3 text-sky-300">Project Gamma</h3>
+                    <div class="mb-3">
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Vue.js</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Firebase</span>
+                        <span class="inline-block bg-gray-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">TailwindCSS</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        A collaborative project management application with a focus on intuitive UI and real-time updates for team productivity.
+                    </p>
+                    <a href="#" class="font-medium text-sky-400 hover:text-sky-300 hover:underline underline-offset-4 transition-colors">
+                        View Details &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title" data-aos="fade-up">
+                Recent Articles
+            </h2>
+            <div class="space-y-8 max-w-2xl mx-auto">
+                <div class="blog-post-item p-4 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-800/30" data-aos="fade-left" data-aos-duration="500">
+                    <a href="#" class="block group">
+                        <h3 class="blog-post-title text-xl font-semibold mb-1 text-gray-100 transition-colors duration-300">The Future of Web Development: Trends to Watch</h3>
+                        <p class="text-sm text-gray-500 mb-2">Published on: May 05, 2025</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">A quick dive into upcoming technologies and methodologies shaping the web landscape...</p>
+                        <span class="inline-block mt-2 text-sky-400 text-sm group-hover:underline underline-offset-2">Read more <span class="blog-post-arrow inline-block transition-transform duration-300">&rarr;</span></span>
+                    </a>
+                </div>
+                <div class="blog-post-item p-4 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-800/30" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100">
+                     <a href="#" class="block group">
+                        <h3 class="blog-post-title text-xl font-semibold mb-1 text-gray-100 transition-colors duration-300">Mastering Asynchronous JavaScript</h3>
+                        <p class="text-sm text-gray-500 mb-2">Published on: April 20, 2025</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Understanding promises, async/await, and how to write non-blocking code effectively...</p>
+                        <span class="inline-block mt-2 text-sky-400 text-sm group-hover:underline underline-offset-2">Read more <span class="blog-post-arrow inline-block transition-transform duration-300">&rarr;</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title" data-aos="fade-up">
+                Get In Touch
+            </h2>
+            <div class="max-w-xl mx-auto card rounded-xl p-8 shadow-xl" data-aos="zoom-in" data-aos-duration="700">
+                <form action="#" method="POST">
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 text-sm font-medium text-sky-300">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input w-full p-3 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-2 text-sm font-medium text-sky-300">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input w-full p-3 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 text-sm font-medium text-sky-300">Message</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea w-full p-3 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="techno-button w-full font-semibold py-3 px-6 rounded-lg text-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-gray-400 mb-4">Or connect with me on social media:</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="social-link text-gray-400 transition-colors duration-300 text-sm" aria-label="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                     <a href="#" class="social-link text-gray-400 transition-colors duration-300 text-sm" aria-label="GitHub Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                    <a href="#" class="social-link text-gray-400 transition-colors duration-300 text-sm" aria-label="Twitter Profile">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-10 border-t border-gray-800 mt-16">
+        <p class="text-sm text-gray-500">&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+        <p class="text-xs text-gray-600 mt-1">Designed with a techno-inspired aesthetic.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 600, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out-quad', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate progress bars when they come into view
+        const animateProgressBars = () => {
+            const progressBars = document.querySelectorAll('.progress-bar-fill');
+            progressBars.forEach(bar => {
+                // Check if the bar is visible (using a simple check for AOS class)
+                // A more robust solution would use Intersection Observer API directly if AOS events are not sufficient
+                const parentSection = bar.closest('section[data-aos]'); // Or any common ancestor that gets AOS animation
+                
+                // Create an observer for each progress bar's parent container
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const skillLevel = bar.getAttribute('data-skill-level');
+                            bar.style.width = skillLevel + '%';
+                            // Animate percentage text (optional)
+                            const percentageText = bar.parentElement.previousElementSibling.querySelector('.skill-percentage');
+                            if(percentageText) {
+                                let currentLevel = 0;
+                                const targetLevel = parseInt(skillLevel);
+                                const increment = targetLevel / 50; // Animate over ~0.75s (50 * 15ms)
+                                const interval = setInterval(() => {
+                                    currentLevel += increment;
+                                    if (currentLevel >= targetLevel) {
+                                        currentLevel = targetLevel;
+                                        clearInterval(interval);
+                                    }
+                                    percentageText.textContent = Math.round(currentLevel) + '%';
+                                }, 15);
+                            }
+                           observer.unobserve(entry.target); // Stop observing once animated
+                        }
+                    });
+                }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+                // Observe the progress bar itself or its container
+                observer.observe(bar.parentElement);
+            });
+        };
+        
+        // Call progress bar animation function
+        // It will be triggered by IntersectionObserver, so no need to tie to AOS events explicitly for this version
+        animateProgressBars();
+
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Fade in body on load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Simple form submission alert (no actual backend)
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Create a custom message box instead of alert
+                const messageBox = document.createElement('div');
+                messageBox.style.position = 'fixed';
+                messageBox.style.bottom = '20px';
+                messageBox.style.left = '50%';
+                messageBox.style.transform = 'translateX(-50%)';
+                messageBox.style.padding = '15px 25px';
+                messageBox.style.backgroundColor = '#00e5ff';
+                messageBox.style.color = '#0a0a0a';
+                messageBox.style.borderRadius = '8px';
+                messageBox.style.boxShadow = '0 4px 15px rgba(0, 229, 255, 0.4)';
+                messageBox.style.zIndex = '1000';
+                messageBox.style.opacity = '0';
+                messageBox.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
+                messageBox.textContent = 'Thank you! Your message has been "sent". (Demo only)';
+                document.body.appendChild(messageBox);
+
+                // Animate in
+                setTimeout(() => {
+                    messageBox.style.opacity = '1';
+                    messageBox.style.transform = 'translateX(-50%) translateY(-10px)';
+                }, 10);
+                
+
+                // Clear form
+                this.reset();
+
+                // Remove message box after a few seconds
+                setTimeout(() => {
+                    messageBox.style.opacity = '0';
+                    messageBox.style.transform = 'translateX(-50%) translateY(0px)';
+                    setTimeout(() => {
+                        document.body.removeChild(messageBox);
+                    }, 300);
+                }, 4000);
+            });
+        }
+
+    </script>
+</body>
+</html>
