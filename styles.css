@@ -1,0 +1,62 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a; /* Very dark gray, almost black */
+    color: #e5e5e5; /* Light gray for text */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+body.loaded {
+    opacity: 1;
+}
+.techno-text {
+    color: #00e5ff; /* Bright cyan for accents */
+}
+.techno-button {
+    background-color: #00e5ff;
+    color: #0a0a0a;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+.techno-button:hover {
+    background-color: #00c4dd;
+    transform: scale(1.05);
+}
+.progress-bar-container {
+    background-color: #262626; /* Darker gray for progress bar background */
+}
+.progress-bar-fill {
+    background-color: #00e5ff; /* Cyan for progress fill */
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth animation for progress bar */
+}
+.section-title {
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.card {
+    background-color: #171717; /* Slightly lighter dark for cards */
+    border: 1px solid #262626; /* Subtle border */
+}
+.form-input, .form-textarea {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #e5e5e5;
+}
+.form-input::placeholder, .form-textarea::placeholder {
+    color: #777;
+}
+.social-link:hover {
+    color: #00e5ff;
+    transform: scale(1.1);
+}
+.blog-post-item:hover .blog-post-title {
+    color: #00e5ff;
+}
+.blog-post-item:hover .blog-post-arrow {
+    transform: translateX(5px);
+    color: #00e5ff;
+}
+/* Custom focus states for better visibility */
+*:focus-visible {
+    outline: 2px solid #00e5ff !important; /* Bright cyan outline */
+    outline-offset: 2px !important;
+}
